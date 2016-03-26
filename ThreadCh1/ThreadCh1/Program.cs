@@ -14,18 +14,22 @@ namespace ThreadCh1
         {
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("ThreadProc: { 0}", i);
+                Console.WriteLine("ThreadProc: {0}", i);
             Thread.Sleep(0);
+                Console.ReadLine();
+
         }
     }
     public static void Main(string[] args)
         {
             Thread t = new Thread(new ThreadStart(ThreadMethod));
             t.Start();
+
             for (int i = 0; i < 4; i++)
             {
                 Console.WriteLine("Main thread: Do some work.");
                 Thread.Sleep(0);
+                Console.ReadLine();
             }
             t.Join();
         }

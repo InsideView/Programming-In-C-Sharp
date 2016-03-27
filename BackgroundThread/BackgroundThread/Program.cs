@@ -25,6 +25,8 @@ namespace BackgroundThread
             t.IsBackground = true;
             t.Start();
 
+            Console.ReadKey();
+
         }
     }
 }
